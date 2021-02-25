@@ -1,0 +1,48 @@
+# ch.mayer_NW_or_SW_Aligment.py
+
+ch.mayer_NW_or_SW_Aligment.py is a Python Script for aligning sequences with Needleman-Wunsch or Smith-Waterman Algorithm.
+
+## Installation
+
+Put the ch.mayer_NW_or_SW_Aligment.py File in your choosen directory. To execute it, you have to set your current directory to your choosen directory or the File has to be in the PATH.
+Requirements: argparse, Bio, collections and os.path module
+
+## Usage
+
+activate your python environment
+
+```bash
+ch.mayer_NW_or_SW_Aligment.py -h
+
+```
+
+## Description
+
+This script was made for a homework project. It can align RNA or DNA Strings together with Needleman-Wunsch, Smith-Waterman or both. 
+
+Input can be given as FASTA Files or manually in bash. One File and one manually written sequence is also possible. All inputs are given via argparse module.
+
+Additionally, a proof algorithm for valid DNA or RNA Sequence is implemented, which proofs the given input (File and manually written sequence). Valid DNA/RNA sequences are allowed to contain A, G, C, T or U and N.
+Try some different input cases to see the whole Error handling system.
+For example: -) no existing file, wrong manually written sequence or U and T mixed in same sequence
+	     -) existing file with wrong Nucleotides or U and T mixed
+	     -) no FASTA format file
+	     -) FASTA file with more than one sequence (with 'SeqIO.read(sequence, "fasta")' automatically only one sequence per file is possible)
+	     -) a RNA sequence with a DNA sequence (File or manually written all combinations work)
+
+Output: choosen cost values (can also be changed in input), both input sequences, Aligment and Score of the Aligment
+	if more than one local aligment has max Score --> all aligments are printed (due to my intelligent dictionary solution)
+	with -vm also the value matrix for the aligment
+
+Also try to open the script in spyder. If you activate code analysis, you get blue callsigns on specific lines of the script. Most of them concern the implementation of Smith-Waterman.
+
+## Bugs
+Sometimes on first call in a new bash terminal two of the value matrix columns move together.
+
+## Future
+RNA gets not transformated, so it has to be clear if it is reverse or forward.
+A RNA to DNA converter to align procaryotic RNA to DNA sequences is not implemented.
+Also theres no algorithm to handle eucaryotic RNA in correct way to align it to DNA (e.g. splicing).
+
+## Authors
+Christian Mayer
