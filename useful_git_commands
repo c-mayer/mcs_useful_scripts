@@ -5,7 +5,7 @@ git show HEAD~1 --> shows the second last commit
 git diff --> shows differences between working tree and ast commit
 git diff HEAD~x HEAD~y --> shows differences between x-last commit and y-last commit
 
-git add FILE --> stages given files (-A or . for all)
+git add FILE --> stages given files (-A or . for all) --> only these files get commited afterwards
 git commit -m STRING --> commits staged files to local repository (-a includes staging, -m STRING is needed)
 
 git push --> push local repository to remote repository
