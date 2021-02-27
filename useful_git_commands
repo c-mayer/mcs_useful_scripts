@@ -13,4 +13,3 @@ git pull --> pull remote repository to workspace (local)
 
 git fetch --> pull remote repository to local repository --> does not alter your workspace (existing parallel)
 
-weitere Zeile
