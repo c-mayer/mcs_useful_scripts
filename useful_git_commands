@@ -1,5 +1,5 @@
 git status --> shows the status of the repo
-git log --> shows the history of commits
+git log --> shows the history of commits (--oneline better)
 git show HEAD --> shows the last commit
 git show HEAD~1 --> shows the second last commit
 git diff --> shows differences between working tree and ast commit
@@ -13,3 +13,5 @@ git pull --> pull remote repository to workspace (local)
 
 git fetch --> pull remote repository to local repository --> does not alter your workspace (existing parallel)
 
+git branch BRANCHNAME --> creates branch
+git checkout BRANCHNAME --> switched between branches
